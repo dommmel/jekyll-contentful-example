@@ -1,0 +1,11 @@
+<ul>
+  {% for p in site.pages %}
+    {% if p.title and page.contentful_locale == p.contentful_locale %}
+    <li>
+      <h2>
+        <a href="{{ p.url | prepend: site.baseurl }}">{{ p.title }}</a>
+      </h2>
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
